@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Каталог шаблонов</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -12,7 +14,7 @@ body {
     margin: 0;
 }
 
-/* Карточка */
+/* Карточки */
 .card {
     background: #fff;
     color: #000;
@@ -23,14 +25,9 @@ body {
     gap: 16px;
     max-width: 900px;
     box-shadow: 0 0 20px rgba(255,255,255,0.1);
-    transition: transform 0.2s ease;
 }
 
-.card:hover {
-    transform: translateY(-3px);
-}
-
-/* Превью (ПК) */
+/* Превью */
 .thumb {
     width: 200px;
     height: 120px;
@@ -38,26 +35,23 @@ body {
     border-radius: 10px;
 }
 
-/* Контейнер инфо */
+/* Контейнер текста */
 .info {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* Заголовок */
 h3 {
     margin: 0 0 6px;
     font-size: 20px;
 }
 
-/* Описание */
 .small {
     color: #333;
     font-size: 14px;
 }
 
-/* Кнопка */
 .btn {
     display: inline-block;
     padding: 12px 16px;
@@ -77,7 +71,7 @@ audio {
     border-radius: 8px;
 }
 
-/* 📱 АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
+/* 📱 Адаптация под мобильные */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -100,846 +94,30 @@ audio {
         margin-top: 10px;
     }
 
-    .small {
-        font-size: 14px;
-    }
-
     .btn {
-        padding: 14px;
-        font-size: 16px;
         width: 100%;
     }
 }
-
-/* 📱 ЕЩЁ БОЛЬШЕ АДАПТАЦИИ ДЛЯ iPhone SE / маленьких экранов */
-@media (max-width: 390px) {
-    h3 {
-        font-size: 17px;
-    }
-
-    .btn {
-        font-size: 15px;
-    }
-}
 </style>
+</head>
+<body>
+
+<div id="list">Загрузка...</div>
+
+<script>
 
 const BOT_NAME = "Kacaro_bot";
 
-const data = [
-            {
-                "display_name": "PASSO BEM SOLTO",
-                "workflow_tag": "passodance_250609",
-                "template_id": 343058408062016,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_passodance_250626.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_passodance_250626.mov",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_passodance_250626.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_passodance_250626.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_passodance_250626.mov",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_passodance_250626.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"PASSO甩手舞\",\"display_prompt\":\"感觉至上，派对不停\"},\"es-ES\":{\"display_name\":\"Baile de Brazos PASSO\",\"display_prompt\":\"¡El sentimiento es lo primero, la fiesta no para!\"},\"ja-JP\":{\"display_name\":\"PASSO 腕振りダンス\",\"display_prompt\":\"フィーリング至上、パーティーは止まらない\"},\"ko-KR\":{\"display_name\":\"PASSO 손 흔들기 댄스\",\"display_prompt\":\"느낌이 최고, 파티는 끝나지 않습니다\"},\"pt-BR\":{\"display_name\":\"Dança de Braços PASSO\",\"display_prompt\":\"Sentimento em primeiro lugar, festa sem parar\"},\"fr-FR\":{\"display_name\":\"Danse des Bras PASSO\",\"display_prompt\":\"Le feeling avant tout, la fête ne s'arrête pas\"},\"de-DE\":{\"display_name\":\"PASSO Arm-Schwing-Tanz\",\"display_prompt\":\"Gefühl steht an erster Stelle, die Party hört nicht auf\"},\"ru-RU\":{\"display_name\":\"PASSO танец взмахов руками\",\"display_prompt\":\"Ощущения превыше всего, вечеринка не останавливается\"}}",
-                "create_type": "",
-                "display_prompt": "Party at the weekend, only good vibes",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-11T08:42:22Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/passo.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fpasso.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":534503544,\"img_url\":\"https://media.pixverse.ai/upload%2F1e6e391b-9d3f-40d6-9cd7-3292226b0559.jpg\"}]",
-                "score": 2.67,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person ",
-                "duration": 13,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Neymar DJ Dance",
-                "workflow_tag": "neymardance_250609",
-                "template_id": 343058215445568,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_neymardance_0624.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_neymardance_0624.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_neymardance_0624.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_neymardance_0624.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_neymardance_0624.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_neymardance_0624.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"内马尔DJ舞步\",\"display_prompt\":\"魅力四射，掌握这舞技吧！\"},\"es-ES\":{\"display_name\":\"Baile DJ de Neymar\",\"display_prompt\":\"Demasiado carismático, ¡a dominar estos pasos de baile!\"},\"ja-JP\":{\"display_name\":\"ネイマールDJダンス\",\"display_prompt\":\"魅力的すぎる、このダンススキルを身につけよう。\"},\"ko-KR\":{\"display_name\":\"네이마르 DJ 댄스\",\"display_prompt\":\"넘치는 매력, 이 춤 실력을 마스터해보세요!\"},\"pt-BR\":{\"display_name\":\"Dança DJ do Neymar\",\"display_prompt\":\"Incrivelmente charmoso, vamos dominar essa dança!\"},\"fr-FR\":{\"display_name\":\"Danse DJ de Neymar\",\"display_prompt\":\"Trop charmant, maîtrisons ces pas de danse.\"},\"de-DE\":{\"display_name\":\"Neymar DJ Dance\",\"display_prompt\":\"Überaus charmant, lass uns diese Tanz-Skills erobern.\"},\"ru-RU\":{\"display_name\":\"Танец Неймара-диджея\",\"display_prompt\":\"Чрезвычайно обаятельно, овладей этими танцевальными навыками.\"},\"en-US\":{\"display_name\":\"Neymar DJ Dance\",\"display_prompt\":\"Overly charming, let's possess this dance skills.\"}}",
-                "create_type": "",
-                "display_prompt": "Overly charming, let's possess this dance skills.",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-11T08:40:48Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/neymar.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fneymar.MP3",
-                "effect_type": "1",
-                "example_list": "",
-                "score": 3.19,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person ",
-                "duration": 14,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Skeleton Dance",
-                "workflow_tag": "skeleton_dance_250511",
-                "template_id": 337572593925696,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_skeleton_250513.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_skeleton_250513_2.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_skeleton_250513_2.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_skeleton_250513.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_skeleton_250513.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_skeleton_250513.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"骷髅舞王\",\"display_prompt\":\"像网红骨架一样抖起来，整活时间到！\"},\"es-ES\":{\"display_name\":\"Rey del Baile Esqueleto\",\"display_prompt\":\"¡Muévete como un esqueleto viral, ¡llegó la hora de divertirse!\"},\"ja-JP\":{\"display_name\":\"スケルトンダンスキング\",\"display_prompt\":\"バイラル骨格のように揺れ動こう、楽しい時間の始まりだ！\"},\"ko-KR\":{\"display_name\":\"해골 댄스 킹\",\"display_prompt\":\"인기 해골처럼 흔들어봐요, 재미있는 시간이 왔습니다！\"},\"pt-BR\":{\"display_name\":\"Rei da Dança Esqueleto\",\"display_prompt\":\"Balance como um esqueleto viral, é hora da diversão!\"},\"fr-FR\":{\"display_name\":\"Roi de la Danse Squelette\",\"display_prompt\":\"Secouez-vous comme un squelette viral, c'est l'heure de s'amuser !\"},\"de-DE\":{\"display_name\":\"Skelett-Tanzkönig\",\"display_prompt\":\"Schütteln Sie sich wie ein virales Skelett, es ist Zeit für Spaß!\"},\"ru-RU\":{\"display_name\":\"Король скелетных танцев\",\"display_prompt\":\"Трясись как вирусный скелет, время веселья пришло!\"}}",
-                "create_type": "",
-                "display_prompt": "Shake it like that viral skeleton -  it’s meme time!",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-05-11T08:38:42Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/app_skeleton_250513.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_skeleton_250513.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":113741803,\"img_url\":\"https://media.pixverse.ai/upload%2Fb2626bc2-050d-4ea6-a864-e2054c012df5.png\"}]",
-                "score": 3.2,
-                "sample_list": [],
-                "example_text": "",
-                "duration": 9,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Rat Dance Killer",
-                "workflow_tag": "ratdance_250609",
-                "template_id": 343058469676096,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_ratdance_250626.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_ratdance_250626.mov",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_ratdance_250626.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_ratdance_250626.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_ratdance_250626.mov",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_ratdance_250626.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"老鼠舞杀手\",\"display_prompt\":\"在全世界任何地方跳起老鼠舞\"},\"es-ES\":{\"display_name\":\"Asesino de la Danza de Rata\",\"display_prompt\":\"¡Haz la danza de rata en cualquier lugar del mundo!\"},\"ja-JP\":{\"display_name\":\"ラットダンス キラー\",\"display_prompt\":\"世界中どこでもラットダンスをしよう\"},\"ko-KR\":{\"display_name\":\"쥐 댄스 킬러\",\"display_prompt\":\"세계 어디서든 쥐 댄스를 춰보세요\"},\"pt-BR\":{\"display_name\":\"Matador da Dança do Rato\",\"display_prompt\":\"Faça a dança do rato em qualquer lugar do mundo\"},\"fr-FR\":{\"display_name\":\"Tueur de Danse de Rat\",\"display_prompt\":\"Faites la danse du rat n'importe où dans le monde\"},\"de-DE\":{\"display_name\":\"Ratten-Tanz-Killer\",\"display_prompt\":\"Machen Sie den Rattentanz überall auf der Welt\"},\"ru-RU\":{\"display_name\":\"Убийца крысиного танца\",\"display_prompt\":\"Танцуйте крысиный танец в любой точке мира\"}}",
-                "create_type": "",
-                "display_prompt": "Do the rat dance anywhere in the world",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-11T08:42:52Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/ratdance.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fratdance.MP3",
-                "effect_type": "1",
-                "example_list": "",
-                "score": 3.22,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person ",
-                "duration": 8,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Shake Shake  Disco",
-                "workflow_tag": "shakeitdance_250609",
-                "template_id": 343058524240960,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp-shake-251109-%E5%B0%81%E9%9D%A2.jpg",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp-shake-251109.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp-shake-251109.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb-shake-251109-%E5%B0%81%E9%9D%A2.jpg",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb-shake-251109.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb-shake-251109.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"摇摇迪斯科\",\"display_prompt\":\"舞池需要你的摇摆\"},\"es-ES\":{\"display_name\":\"Disco Bailongo\",\"display_prompt\":\"¡La pista de baile necesita tu movimiento!\"},\"ja-JP\":{\"display_name\":\"揺れ揺れディスコ\",\"display_prompt\":\"ダンスフロアにはあなたのスウィングが必要\"},\"ko-KR\":{\"display_name\":\"흔들흔들 디스코\",\"display_prompt\":\"댄스 플로어에 당신의 스윙이 필요합니다\"},\"pt-BR\":{\"display_name\":\"Disco Balançante\",\"display_prompt\":\"A pista de dança precisa do seu balanço\"},\"fr-FR\":{\"display_name\":\"Disco Qui Bouge\",\"display_prompt\":\"La piste de danse a besoin de votre déhanchement\"},\"de-DE\":{\"display_name\":\"Wackel-Disco\",\"display_prompt\":\"Die Tanzfläche braucht Ihren Schwung\"},\"ru-RU\":{\"display_name\":\"Качающаяся дискотека\",\"display_prompt\":\"Танцполу нужны ваши движения\"}}",
-                "create_type": "",
-                "display_prompt": "The dance floor needs your wave",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-11T08:43:19Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/app-shake-251109.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp-shake-251109.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":534503544,\"img_url\":\"https://media.pixverse.ai/upload%2F1e6e391b-9d3f-40d6-9cd7-3292226b0559.jpg\"}]",
-                "score": 3.34,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person",
-                "duration": 12,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Emergency Beat",
-                "workflow_tag": "emergency_250409",
-                "template_id": 331864971269184,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_emergency_251113.jpg",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_emergency_251113.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_emergency_251113.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_emergency_251113.jpg",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_emergency_251113.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_emergency_251113.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"紧急热舞\",\"display_prompt\":\"警报拉响，一起来热舞！\"},\"es-ES\":{\"display_name\":\"Baile de Emergencia\",\"display_prompt\":\"¡Suena la alarma, ¡vamos a bailar!\"},\"ja-JP\":{\"display_name\":\"緊急ダンス\",\"display_prompt\":\"警報が鳴り、みんなでダンスしよう！\"},\"ko-KR\":{\"display_name\":\"긴급 댄스\",\"display_prompt\":\"경보가 울리니, 함께 춤을 춥시다！\"},\"pt-BR\":{\"display_name\":\"Dança de Emergência\",\"display_prompt\":\"O alarme dispara, vamos dançar!\"},\"fr-FR\":{\"display_name\":\"Danse d'Urgence\",\"display_prompt\":\"L'alarme sonne, dansons ensemble !\"},\"de-DE\":{\"display_name\":\"Nottanz\",\"display_prompt\":\"Der Alarm ertönt, lasst uns tanzen!\"},\"ru-RU\":{\"display_name\":\"Экстренный танец\",\"display_prompt\":\"Тревога звучит, давайте танцевать!\"}}",
-                "create_type": "",
-                "display_prompt": "Emergency on the dance floor — time to slay!",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-04-09T02:29:57Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p"
-                ],
-                "img_key_list": [
-                    ""
-                ],
-                "audio_path": "asset/template/app_emergency_251113.mp3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_emergency_251113.mp3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":113741803,\"img_url\":\"https://media.pixverse.ai/upload%2Fb2626bc2-050d-4ea6-a864-e2054c012df5.png\"}]",
-                "score": 3.79,
-                "sample_list": [],
-                "example_text": "",
-                "duration": 7,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Strikeout Dance",
-                "workflow_tag": "3wavedance_250609",
-                "template_id": 343058619202624,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_3wave_250626.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_3wave_250626.mov",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_3wave_250626.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_3wave_250626.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_3wave_250626.mov",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_3wave_250626.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"三振舞\",\"display_prompt\":\"三次震颤，一个回合\"},\"es-ES\":{\"display_name\":\"Danza de Tres Strikes\",\"display_prompt\":\"¡Tres temblores, una ronda!\"},\"ja-JP\":{\"display_name\":\"三振ダンス\",\"display_prompt\":\"三回の震え、一つのラウンド\"},\"ko-KR\":{\"display_name\":\"삼진 댄스\",\"display_prompt\":\"세 번의 떨림, 한 라운드입니다\"},\"pt-BR\":{\"display_name\":\"Dança dos Três Strikes\",\"display_prompt\":\"Três tremores, uma rodada\"},\"fr-FR\":{\"display_name\":\"Danse des Trois Frappes\",\"display_prompt\":\"Trois tremblements, un round\"},\"de-DE\":{\"display_name\":\"Drei-Strike-Tanz\",\"display_prompt\":\"Drei Zittern, eine Runde\"},\"ru-RU\":{\"display_name\":\"Танец трёх ударов\",\"display_prompt\":\"Три дрожания, один раунд\"}}",
-                "create_type": "",
-                "display_prompt": "Three strikes, one round",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-11T08:44:05Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/3wave.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2F3wave.MP3",
-                "effect_type": "1",
-                "example_list": "",
-                "score": 3.79,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person ",
-                "duration": 15,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Hands Up! Hands Up! ",
-                "workflow_tag": "handsupdance_250609",
-                "template_id": 343058324329536,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_handsup_250626.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_handsup_250626.mov",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_handsup_250626.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_handsup_250626.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_handsup_250626.mov",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_handsup_250626.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"跳大神舞\",\"display_prompt\":\"举起手，扭起胯，一起引爆夏日\"},\"es-ES\":{\"display_name\":\"¡Manos Arriba! Muévete\",\"display_prompt\":\"¡Levanta las manos, mueve las caderas, ¡vamos a hacer explotar el verano!\"},\"ja-JP\":{\"display_name\":\"ハンズアップ！ 振り回そう\",\"display_prompt\":\"手を上げて、腰を振って、一緒に夏を爆発させよう\"},\"ko-KR\":{\"display_name\":\"핸즈 업! 흔들어봐\",\"display_prompt\":\"손을 들고, 허리를 흔들고, 함께 여름을 폭발시켜봅시다\"},\"pt-BR\":{\"display_name\":\"Mãos para Cima! Balança\",\"display_prompt\":\"Levante as mãos, balance o quadril, vamos explodir o verão\"},\"fr-FR\":{\"display_name\":\"Les Mains en l'Air ! Secouez\",\"display_prompt\":\"Levez les mains, bougez les hanches, faisons exploser l'été\"},\"de-DE\":{\"display_name\":\"Hände Hoch! Schwing sie\",\"display_prompt\":\"Hände hoch, Hüften schwingen, lasst uns den Sommer zum Explodieren bringen\"},\"ru-RU\":{\"display_name\":\"Руки вверх! Качайся\",\"display_prompt\":\"Поднимите руки, крутите бёдрами, давайте взорвём лето\"}}",
-                "create_type": "",
-                "display_prompt": "Raise your hands, stamp your feet, and detonate summer together ",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-30T08:41:41Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/handsup.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fhandsup.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":534503544,\"img_url\":\"https://media.pixverse.ai/upload%2F1e6e391b-9d3f-40d6-9cd7-3292226b0559.jpg\"}]",
-                "score": 3.82,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person ",
-                "duration": 14,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Li Xi Cheng Merch",
-                "workflow_tag": "lixichengdance_250609",
-                "template_id": 343058574996544,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_lixicheng_250626.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_lixicheng_250626.mov",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_lixicheng_250626.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_lixicheng_250626.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_lixicheng_250626.mov",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_lixicheng_250626.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"Li Xi Cheng 进行曲\",\"display_prompt\":\"从前那时，传奇诞生\"},\"es-ES\":{\"display_name\":\"Marcha de Li Xi Cheng\",\"display_prompt\":\"¡En aquellos tiempos, nació la leyenda!\"},\"ja-JP\":{\"display_name\":\"Li Xi Cheng 行進曲\",\"display_prompt\":\"昔その時、伝説が生まれた\"},\"ko-KR\":{\"display_name\":\"Li Xi Cheng 행진곡\",\"display_prompt\":\"그 옛날, 전설이 탄생했습니다\"},\"pt-BR\":{\"display_name\":\"Marcha de Li Xi Cheng\",\"display_prompt\":\"Naqueles tempos, uma lenda nasceu\"},\"fr-FR\":{\"display_name\":\"Marche de Li Xi Cheng\",\"display_prompt\":\"En ce temps-là, une légende est née\"},\"de-DE\":{\"display_name\":\"Li Xi Cheng Marsch\",\"display_prompt\":\"Damals wurde eine Legende geboren\"},\"ru-RU\":{\"display_name\":\"Марш Li Xi Cheng\",\"display_prompt\":\"В те времена родилась легенда\"}}",
-                "create_type": "",
-                "display_prompt": "Once upon a time, a legend was born",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-27T08:43:43Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/lixicheng.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Flixicheng.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":534503544,\"img_url\":\"https://media.pixverse.ai/upload%2F1e6e391b-9d3f-40d6-9cd7-3292226b0559.jpg\"}]",
-                "score": 3.86,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person ",
-                "duration": 13,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Shake It to the Max",
-                "workflow_tag": "shakeittomax_250609",
-                "template_id": 343058758753344,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_shakeitmax_250626.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_shakeitmax_250626.mov",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_shakeitmax_250626.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_shakeitmax_250626.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_shakeitmax_250626.mov",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_shakeitmax_250626.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"Shake It to the Max 挑战\",\"display_prompt\":\"来吧宝贝，屈膝进行摇摆\"},\"es-ES\":{\"display_name\":\"Desafío Shake It to the Max\",\"display_prompt\":\"¡Vamos bebé, dobla las rodillas y balancéate!\"},\"ja-JP\":{\"display_name\":\"Shake It to the Max チャレンジ\",\"display_prompt\":\"さあベイビー、膝を曲げてスウィングしよう\"},\"ko-KR\":{\"display_name\":\"Shake It to the Max 챌린지\",\"display_prompt\":\"자, 베이비, 무릎을 굽혀서 흔들어봐요\"},\"pt-BR\":{\"display_name\":\"Desafio Shake It to the Max\",\"display_prompt\":\"Vamos bebê, dobre os joelhos e balance\"},\"fr-FR\":{\"display_name\":\"Défi Shake It to the Max\",\"display_prompt\":\"Allez bébé, pliez les genoux et balancez-vous\"},\"de-DE\":{\"display_name\":\"Shake It to the Max Herausforderung\",\"display_prompt\":\"Komm schon Baby, beuge die Knie und schwing dich\"},\"ru-RU\":{\"display_name\":\"Вызов Shake It to the Max\",\"display_prompt\":\"Давай, малыш, согни колени и качайся\"}}",
-                "create_type": "",
-                "display_prompt": "Go on bend your knees, baby, shake it to the max",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-30T08:45:13Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/shakeittomax.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fshakeittomax.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":534503544,\"img_url\":\"https://media.pixverse.ai/upload%2F1e6e391b-9d3f-40d6-9cd7-3292226b0559.jpg\"}]",
-                "score": 4.11,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person ",
-                "duration": 12,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Gabu Dance",
-                "workflow_tag": "gabudance_250609",
-                "template_id": 343058274917440,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_gabudance_0624.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_gabudance_0624.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_gabudance_0624.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_gabudance_0624.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_gabudance_0625.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_gabudance_0625.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"Gabu舞\",\"display_prompt\":\"Eu Sento Gabu! 走到哪里都是T台\"},\"es-ES\":{\"display_name\":\"Baile Gabu\",\"display_prompt\":\"Eu Sento Gabu! Cada paso es una pasarela\"},\"ja-JP\":{\"display_name\":\"ガブダンス\",\"display_prompt\":\"Eu Sento Gabu! どこを歩いてもそこはランウェイ\"},\"ko-KR\":{\"display_name\":\"가부 댄스\",\"display_prompt\":\"Eu Sento Gabu! 걷는 곳마다 런웨이가 돼\"},\"pt-BR\":{\"display_name\":\"Gabu Dance\",\"display_prompt\":\"Eu Sento Gabu! Em todo lugar que você anda é passarela\"},\"fr-FR\":{\"display_name\":\"Danse Gabu\",\"display_prompt\":\"Eu Sento Gabu! Partout où tu marches est un podium\"},\"de-DE\":{\"display_name\":\"Gabu Tanz\",\"display_prompt\":\"Eu Sento Gabu! Wo immer du gehst, ist ein Laufsteg\"},\"ru-RU\":{\"display_name\":\"Танец Габу\",\"display_prompt\":\"Eu Sento Gabu! Куда бы ты ни пошел, это подиум\"},\"en-US\":{\"display_name\":\"Gabu Dance\",\"display_prompt\":\"Eu Sento Gabu! Everywhere you walk is Runway\"}}",
-                "create_type": "",
-                "display_prompt": "Eu Sento Gabu! Everywhere you walk is Runway",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-06-11T08:41:17Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/gabu.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fgabu.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":534503544,\"img_url\":\"https://media.pixverse.ai/upload%2F1e6e391b-9d3f-40d6-9cd7-3292226b0559.jpg\"}]",
-                "score": 4.2,
-                "sample_list": [],
-                "example_text": "Select a full - body photo of a single person ",
-                "duration": 12,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Let's YMCA!",
-                "workflow_tag": "babydance_250227",
-                "template_id": 324641581197696,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_ymca_250423.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_ymca_250423.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_ymca_250423.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_ymca_250423.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_ymca_250423.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_ymca_250423.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"一起摇摆！\",\"display_prompt\":\"加入AI迪斯科派对吧！\"},\"es-ES\":{\"display_name\":\"¡A bailar juntos!\",\"display_prompt\":\"¡Únete a la fiesta disco de IA!\"},\"ja-JP\":{\"display_name\":\"一緒に踊ろう！\",\"display_prompt\":\"AIディスコパーティーに参加しよう！\"},\"ko-KR\":{\"display_name\":\"함께 춤춰요！\",\"display_prompt\":\"AI 디스코 파티에 참여하세요！\"},\"pt-BR\":{\"display_name\":\"Vamos dançar juntos!\",\"display_prompt\":\"Junte-se à festa disco de IA!\"},\"fr-FR\":{\"display_name\":\"Dansons ensemble !\",\"display_prompt\":\"Rejoignez la soirée disco IA !\"},\"de-DE\":{\"display_name\":\"Lasst uns zusammen tanzen!\",\"display_prompt\":\"Komm zur KI-Discoparty!\"},\"ru-RU\":{\"display_name\":\"Давайте танцевать вместе！\",\"display_prompt\":\"Присоединяйтесь к диско-вечеринке с ИИ！\"}}",
-                "create_type": "",
-                "display_prompt": "Everyone, join the Disco Party Jam!",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-02-27T06:45:51Z",
-                "updated_at": "2025-12-02T00:00:41Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p",
-                    "1080p"
-                ],
-                "img_key_list": [
-                    ""
-                ],
-                "audio_path": "asset/template/324641581197696.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2F324641581197696.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":111917190,\"img_url\":\"https://media.pixverse.ai/upload%2F6a6a0f6a-99be-4eac-83a1-9d265ca65823.png\"}]",
-                "score": 5.26,
-                "sample_list": [],
-                "example_text": "",
-                "duration": 5,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Vroom Vroom Step",
-                "workflow_tag": "dance_pet_250421",
-                "template_id": 334053280928832,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_dance_250316.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_dancepet_250423.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_dance_250316.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_dance_250316.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_dance_250316.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_dance_250316.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"摩托舞者\",\"display_prompt\":\"节奏轰鸣，舞步出击\"},\"es-ES\":{\"display_name\":\"Bailarín Motorizado\",\"display_prompt\":\"¡El ritmo rugiendo, los pasos de baile atacando!\"},\"ja-JP\":{\"display_name\":\"バイクダンサー\",\"display_prompt\":\"リズムが轟き、ダンスステップが繰り出される\"},\"ko-KR\":{\"display_name\":\"모터사이클 댄서\",\"display_prompt\":\"리듬이 울려 퍼지고, 춤사위가 출격합니다\"},\"pt-BR\":{\"display_name\":\"Dançarino Motorizado\",\"display_prompt\":\"Ritmo rugindo, passos de dança atacando\"},\"fr-FR\":{\"display_name\":\"Danseur Motocycliste\",\"display_prompt\":\"Le rythme rugit, les pas de danse attaquent\"},\"de-DE\":{\"display_name\":\"Motorrad-Tänzer\",\"display_prompt\":\"Rhythmus dröhnt, Tanzschritte schlagen zu\"},\"ru-RU\":{\"display_name\":\"Мотоциклетный танцор\",\"display_prompt\":\"Ритм грохочет, танцевальные движения наносят удар\"}}",
-                "create_type": "",
-                "display_prompt": "Vroom goes the beat, step hits the street",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-04-21T11:18:27Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p",
-                    "1080p"
-                ],
-                "img_key_list": [
-                    ""
-                ],
-                "audio_path": "asset/template/334053280928832.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2F334053280928832.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":113741803,\"img_url\":\"https://media.pixverse.ai/upload%2Fb2626bc2-050d-4ea6-a864-e2054c012df5.png\"}]",
-                "score": 5.41,
-                "sample_list": [],
-                "example_text": "",
-                "duration": 8,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "PUBG Winner Hit",
-                "workflow_tag": "winnerdance_250512",
-                "template_id": 337792714792704,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_winnerdance_250513.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_winnerdance_250513.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_winnerdance_250513.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_winnerdance_250513.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_winnerdance_250513.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_winnerdance_250513.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"PUBG胜利之舞\",\"display_prompt\":\"吃鸡成功，是时候跳一支胜利之舞！\"},\"es-ES\":{\"display_name\":\"Baile de Victoria de PUBG\",\"display_prompt\":\"¡Has conseguido la victoria, ¡es hora de bailar un baile triunfal!\"},\"ja-JP\":{\"display_name\":\"PUBG勝利のダンス\",\"display_prompt\":\"ドン勝成功、勝利のダンスを踊る時だ！\"},\"ko-KR\":{\"display_name\":\"배그 승리의 춤\",\"display_prompt\":\"치킨 디너 성공, 승리의 춤을 출 시간입니다！\"},\"pt-BR\":{\"display_name\":\"Dança da Vitória do PUBG\",\"display_prompt\":\"Frango ao jantar conseguido, hora de dançar a dança da vitória!\"},\"fr-FR\":{\"display_name\":\"Danse de la Victoire PUBG\",\"display_prompt\":\"Poulet rôti réussi, il est temps de danser une danse de la victoire !\"},\"de-DE\":{\"display_name\":\"PUBG-Siegestanz\",\"display_prompt\":\"Chicken Dinner erfolgreich, Zeit für einen Siegestanz!\"},\"ru-RU\":{\"display_name\":\"Танец победы PUBG\",\"display_prompt\":\"Курочка на ужин получена, время станцевать победный танец!\"}}",
-                "create_type": "",
-                "display_prompt": "Victory secured, now hit the dance floor!",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-05-12T14:30:03Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p",
-                    "1080p"
-                ],
-                "img_key_list": null,
-                "audio_path": "asset/template/app_winnerdance_250513.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_winnerdance_250513.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":113741803,\"img_url\":\"https://media.pixverse.ai/upload%2Fb2626bc2-050d-4ea6-a864-e2054c012df5.png\"}]",
-                "score": 5.79,
-                "sample_list": [],
-                "example_text": "",
-                "duration": 8,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Jiggle Jiggle",
-                "workflow_tag": "jiggle_250416",
-                "template_id": 333178074897472,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_jiggle_250422.png",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_jiggle_250422.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_jiggle_250422.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_jiggle_250422.png",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_jiggle_250422.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fweb_jiggle_250422.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"Jiggle Jiggle摇摆舞\",\"display_prompt\":\"扭一扭，拍拍手，转一圈呀跟你走\"},\"es-ES\":{\"display_name\":\"Jiggle Jiggle\",\"display_prompt\":\"¡Menéate, aplaude, da una vuelta y sígueme!\"},\"ja-JP\":{\"display_name\":\"Jiggle Jiggle\",\"display_prompt\":\"くねくねして、手拍子して、くるりと回って、ついておいで\"},\"ko-KR\":{\"display_name\":\"Jiggle Jiggle\",\"display_prompt\":\"흔들흔들, 박수치고, 빙 돌아서 따라오세요\"},\"pt-BR\":{\"display_name\":\"Jiggle Jiggle\",\"display_prompt\":\"Rebole, bata palmas, dê uma volta e me siga\"},\"fr-FR\":{\"display_name\":\"Jiggle Jiggle\",\"display_prompt\":\"Remuez-vous, applaudissez, tournez et suivez-moi\"},\"de-DE\":{\"display_name\":\"Jiggle Jiggle\",\"display_prompt\":\"Wackeln Sie, klatschen Sie, drehen Sie sich und folgen Sie mir\"},\"ru-RU\":{\"display_name\":\"Jiggle Jiggle\",\"display_prompt\":\"Покачайтесь, похлопайте в ладоши, повернитесь и следуйте за мной\"}}",
-                "create_type": "",
-                "display_prompt": "Twist your waist, clap your hands, turn around and follow the beat.",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-04-16T12:36:00Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p",
-                    "1080p"
-                ],
-                "img_key_list": [
-                    ""
-                ],
-                "audio_path": "asset/template/333178074897472.MP3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2F333178074897472.MP3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":113741803,\"img_url\":\"https://media.pixverse.ai/upload%2Fb2626bc2-050d-4ea6-a864-e2054c012df5.png\"}]",
-                "score": 5.86,
-                "sample_list": [],
-                "example_text": "",
-                "duration": 8,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            },
-            {
-                "display_name": "Subject 3 Fever",
-                "workflow_tag": "subject3_250317",
-                "template_id": 327828816843648,
-                "hot_count": 0,
-                "author": "",
-                "app_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_subject3_251109.jpg",
-                "app_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_subject3_251109.mp4",
-                "app_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_subject3_251109.gif",
-                "web_thumbnail_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_subject3_251109.jpg",
-                "web_thumbnail_video_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_subject3_251109.mp4",
-                "web_thumbnail_gif_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_subject3_251109.gif",
-                "marker": "default",
-                "i18n_json": "{\"zh-CN\":{\"display_name\":\"科目三复兴\",\"display_prompt\":\"全民的舞蹈，世界的科目三\"},\"es-ES\":{\"display_name\":\"Renacimiento del Examen Tres\",\"display_prompt\":\"¡El baile del pueblo, el Examen Tres del mundo!\"},\"ja-JP\":{\"display_name\":\"第三科目の復興\",\"display_prompt\":\"みんなのダンス、世界の第三科目\"},\"ko-KR\":{\"display_name\":\"과목 3의 부활\",\"display_prompt\":\"모두의 춤, 세계의 과목 3\"},\"pt-BR\":{\"display_name\":\"Renascimento da Prova Três\",\"display_prompt\":\"A dança do povo, a Prova Três do mundo\"},\"fr-FR\":{\"display_name\":\"Renaissance de l'Épreuve Trois\",\"display_prompt\":\"La danse du peuple, l'Épreuve Trois du monde\"},\"de-DE\":{\"display_name\":\"Wiedergeburt der Prüfung Drei\",\"display_prompt\":\"Der Tanz des Volkes, die Prüfung Drei der Welt\"},\"ru-RU\":{\"display_name\":\"Возрождение Экзамена Три\",\"display_prompt\":\"Танец народа, мировой Экзамен Три\"}}",
-                "create_type": "",
-                "display_prompt": "Subject 3 dance takes the world by storm!",
-                "base_prompt": "",
-                "display_tips": "",
-                "created_at": "2025-03-17T07:03:38Z",
-                "updated_at": "2025-12-02T00:00:42Z",
-                "qualities": [
-                    "360p",
-                    "540p",
-                    "720p",
-                    "1080p"
-                ],
-                "img_key_list": [
-                    ""
-                ],
-                "audio_path": "asset/template/app_subject3_251109.mp3",
-                "audio_url": "https://media.pixverse.ai/asset%2Ftemplate%2Fapp_subject3_251109.mp3",
-                "effect_type": "1",
-                "example_list": "[{\"img_id\":534503544,\"img_url\":\"https://media.pixverse.ai/upload%2F1e6e391b-9d3f-40d6-9cd7-3292226b0559.jpg\"}]",
-                "score": 10.29,
-                "sample_list": [],
-                "example_text": "Select a full body photo",
-                "duration": 8,
-                "author_info": {
-                    "account_id": 0,
-                    "username": "",
-                    "nickname": "",
-                    "avatar": "",
-                    "gender": 0,
-                    "desc": "",
-                    "member_type": 0,
-                    "following": 0,
-                    "followers": 0
-                },
-                "template_type": 1,
-                "template_model": "",
-                "template_paid": 0,
-                "supported_features": null
-            }
-        ]
+// Загружаем JSON из файла
+fetch("data.json")
+    .then(r => r.json())
+    .then(data => render(data))
+    .catch(err => {
+        document.getElementById("list").innerHTML = "Ошибка загрузки JSON";
+        console.error(err);
+    });
 
-function render() {
+function render(data) {
     const list = document.getElementById("list");
     list.innerHTML = "";
 
@@ -949,30 +127,28 @@ function render() {
         const audio = item.audio_url || "";
         const desc = `Тег: ${item.workflow_tag || ""} • ⭐${item.score || ""} • ⏱${item.duration || ""}s`;
 
+        // Генерация ссылки на start
         const startPayload = "open_" + (item.template_id || "");
-        const shareUrl =
-            `https://t.me/${BOT_NAME}?start=` + encodeURIComponent(startPayload);
+        const shareUrl = `https://t.me/${BOT_NAME}?start=` + encodeURIComponent(startPayload);
 
         const card = document.createElement("div");
         card.className = "card";
-        card.innerHTML = `
-            <img class="thumb" src="${thumb}" onerror="this.style.display='none'">
 
+        card.innerHTML = `
+            ${thumb ? `<img class="thumb" src="${thumb}">` : ""}
             <div class="info">
                 <h3>${title}</h3>
                 <div class="small">${desc}</div>
 
                 ${audio ? `<audio controls src="${audio}"></audio>` : ""}
 
-                <a class="btn" href="${shareUrl}" target="_blank">Поделиться в Telegram</a>
+                <a class="btn" href="${shareUrl}" target="_blank">Открыть в Telegram</a>
             </div>
         `;
 
         list.appendChild(card);
     });
 }
-
-render();
 </script>
 
 </body>
