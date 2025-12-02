@@ -9,66 +9,122 @@ body {
     background: #000;
     color: #fff;
     padding: 20px;
+    margin: 0;
 }
 
+/* Карточка */
 .card {
     background: #fff;
     color: #000;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 16px;
     margin: 20px auto;
     display: flex;
     gap: 16px;
     max-width: 900px;
     box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    transition: transform 0.2s ease;
 }
 
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Превью (ПК) */
 .thumb {
     width: 200px;
     height: 120px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
+/* Контейнер инфо */
 .info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Заголовок */
 h3 {
-    margin: 0 0 8px;
+    margin: 0 0 6px;
     font-size: 20px;
 }
 
+/* Описание */
 .small {
     color: #333;
     font-size: 14px;
 }
 
+/* Кнопка */
 .btn {
     display: inline-block;
-    padding: 10px 14px;
+    padding: 12px 16px;
     background: #0088cc;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 16px;
 }
 
+/* Аудио */
 audio {
     width: 100%;
     margin-top: 10px;
+    border-radius: 8px;
+}
+
+/* 📱 АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        flex-direction: column;
+        padding: 14px;
+        margin: 14px 0;
+    }
+
+    .thumb {
+        width: 100%;
+        height: auto;
+        max-height: 260px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .small {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 14px;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/* 📱 ЕЩЁ БОЛЬШЕ АДАПТАЦИИ ДЛЯ iPhone SE / маленьких экранов */
+@media (max-width: 390px) {
+    h3 {
+        font-size: 17px;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
 }
 </style>
-</head>
-<body>
 
-<div id="list">Загрузка...</div>
-
-<script>
-// ВСТАВЬ СЮДА ИМЯ СВОЕГО БОТА
 const BOT_NAME = "Kacaro_bot";
 
-// ВСТАВЬ сюда JSON (Resp.data)
 const data = [
             {
                 "display_name": "PASSO BEM SOLTO",
